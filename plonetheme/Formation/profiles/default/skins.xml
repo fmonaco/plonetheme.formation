@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False" default_skin="Skin Formation">
+
+ <object name="Formation_images"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.Formation:skins/Formation_images"/>
+ <object name="Formation_templates"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.Formation:skins/Formation_templates"/>
+ <object name="Formation_styles"
+    meta_type="Filesystem Directory View"
+    directory="plonetheme.Formation:skins/Formation_styles"/>
+
+ <skin-path name="Skin Formation" based-on="Plone Default">
+  <layer name="Formation_images"
+     insert-after="custom"/>
+  <layer name="Formation_templates"
+     insert-after="Formation_images"/>
+  <layer name="Formation_styles"
+     insert-after="Formation_templates"/>
+ </skin-path>
+
+</object>

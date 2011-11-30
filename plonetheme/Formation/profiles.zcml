@@ -1,0 +1,22 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="plonetheme.Formation">
+
+  <genericsetup:registerProfile
+      name="default"
+      title="Skin Formation"
+      directory="profiles/default"
+      description="Plone theme for Cirb"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+  <genericsetup:importStep
+      name="plonetheme.Formation.various"
+      title="Skin Formation"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="plonetheme.Formation.setuphandlers.setupVarious">
+    <depends name="skins"/>
+  </genericsetup:importStep>
+
+</configure>
