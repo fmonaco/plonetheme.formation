@@ -1,4 +1,5 @@
 <configure
+    xmlns:plone="http://namespaces.plone.org/plone"
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
     xmlns:cmf="http://namespaces.zope.org/cmf"
@@ -10,5 +11,7 @@
   <include package=".browser" />
   <include file="skins.zcml" />
   <include file="profiles.zcml" />
+
+  <plone:static directory="static" type="theme" />
 
 </configure>
